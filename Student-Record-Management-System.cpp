@@ -23,7 +23,7 @@ cin>>roll_no[i];
 cout<<"⇲ Enter Name : ";
 cin>>name[i];
 cout<<"⇲ Enter Last Name : ";
-cin>>lastname[30];
+cin>>lastname[i];
 cout<<"⇲ Enter Class: ";
 cin>>Class[i];
 cout<<"⇲ Enter Course: ";
