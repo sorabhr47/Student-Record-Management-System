@@ -1,5 +1,5 @@
 //PROJECT: Student Record Management System using C++
-//By Dhruve vishwskarma 
+//By Dhruve vishwskarma  
 #include<iostream>
 using namespace std;
 string roll_no[30],name[30],lastname[30],Class[30],course[30],
