@@ -82,7 +82,7 @@ void show()
  }
 void search()
  {
-  if(total==0)
+   if(total==0)
    {
      cout<<"  ✘ Data not found ☹ "<<endl; 
    }
@@ -108,108 +108,117 @@ void search()
 }
 
 void update()
-{
-if(total==0)
-{
-cout<<"  ✘ Data not found ☹ "<<endl; 
-}
-else{
-string rollno;
-cout<<"⇲ Enter the roll to update"<<endl<<" ➭";
-cin>>rollno;
-for(int i=0;i<total;i++)
-{
-if(rollno==roll_no[i]) 
-//Dhruve vishwakarma
-{
-cout<<"\n  〘 Previous Data 〙"<<endl<<endl;
-cout<<"\n ⌨ Data of Student : "<<i+1<<endl<<endl;
-cout<<"➥Roll NO : "<<roll_no[i]<<endl;
-cout<<"➥Name    : "<<name[i]<<" "<<lastname[i]<<endl;
-cout<<"➥Class   : "<<Class[i]<<endl;
-cout<<"➥Course  : "<<course[i]<<endl;
-cout<<"➥Mobile  : "<<mobile_no[i]<<endl;
-cout<<"➥Admission Year : "<<admission_year[i]<<endl;
+   {
+    if(total==0)
+      {
+       cout<<"  ✘ Data not found ☹ "<<endl; 
+      }
+    else
+      {
+       string rollno;
+       cout<<"⇲ Enter the roll to update"<<endl<<" ➭";
+       cin>>rollno;
+       for(int i=0;i<total;i++)
+          {
+          if(rollno==roll_no[i]) 
+          //Dhruve vishwakarma
+            {
+             cout<<"\n  〘 Previous Data 〙"<<endl<<endl;
+             cout<<"\n ⌨ Data of Student : "<<i+1<<endl<<endl;
+             cout<<"➥Roll NO : "<<roll_no[i]<<endl;
+             cout<<"➥Name    : "<<name[i]<<" "<<lastname[i]<<endl;
+             cout<<"➥Class   : "<<Class[i]<<endl;
+             cout<<"➥Course  : "<<course[i]<<endl;
+             cout<<"➥Mobile  : "<<mobile_no[i]<<endl;
+             cout<<"➥Admission Year : "<<admission_year[i]<<endl;
 
-cout<<"\n⇲ Enter new data ☟ "<<endl<<endl;
-cout<<"⇲ Enter Roll NO : "; 
-cin>>roll_no[i];
-cout<<"⇲ Enter Name : ";
-cin>>name[i];
-cout<<"⇲ Enter Last Name : ";
-cin>>lastname[i];
-cout<<"⇲ Enter Class: ";
-cin>>Class[i];
-cout<<"⇲ Enter Course: ";
-cin>>course[i];
-cout<<"⇲ Enter Admission Year: ";
-cin>>admission_year[i];
-cout<<"⇲ Enter Mobile NO: ";
-cin>>mobile_no[i];
-cout<<"\n     { ☑  SUCCEFULLY Updated ☑ }     "<<endl;
-}
-}
-}
-}
+             cout<<"\n⇲ Enter new data ☟ "<<endl<<endl;
+             cout<<"⇲ Enter Roll NO : "; 
+             cin>>roll_no[i];
+             cout<<"⇲ Enter Name : ";
+             cin>>name[i];
+             cout<<"⇲ Enter Last Name : ";
+             cin>>lastname[i];
+             cout<<"⇲ Enter Class: ";
+             cin>>Class[i];
+             cout<<"⇲ Enter Course: ";
+             cin>>course[i];
+             cout<<"⇲ Enter Admission Year: ";
+             cin>>admission_year[i];
+             cout<<"⇲ Enter Mobile NO: ";
+             cin>>mobile_no[i];
+             cout<<"\n     { ☑  SUCCEFULLY Updated ☑ }     "<<endl;
+            }
+          }
+      }
+ }
 void Delete()
-{
-if(total==0)
-{
-cout<<"  ✘ Data not found ☹ "<<endl; 
-}
-else 
-{
-int a;
-cout<<"≟ Are you Sure to Delete Data?"<<endl;
-cout<<" Press 1 to delete all record"<<endl<<" ➭";
-cin>>a;
-if(a==1)
-{
-total=0;
-cout<<"    ✔ All record is deleted..!!"<<endl;
-}
-else
-{
-cout<<"Please Press 1 to Delete All Record"<<endl;}
-}
-} 
+   {
+    if(total==0)
+      {
+       cout<<"  ✘ Data not found ☹ "<<endl; 
+      }
+    else 
+      {
+       int a;
+       cout<<"≟ Are you Sure to Delete Data?"<<endl;
+       cout<<" Press 1 to delete all record"<<endl<<" ➭";
+       cin>>a;
+       if(a==1)
+         {
+          total=0;
+          cout<<"    ✔ All record is deleted..!!"<<endl;
+         }
+
+       else
+         {
+          cout<<"Please Press 1 to Delete All Record"<<endl;}
+         }
+   } 
 int main() //main function, execution of program starts from here
-{
-int value;
-while(true) //to always in Loop
-{
-cout<<"\n ❏ Press ☟ "<<endl<<endl;
-cout<<"➭ ➊ To Enter data"<<endl;
-cout<<"➭ ➋ To Show data"<<endl;
-cout<<"➭ ➌ To Search data"<<endl;
-cout<<"➭ ❹ To Update data"<<endl;
-cout<<"➭ ❺ To Delete data"<<endl;
-cout<<"➭ ❻ To Quit"<<endl<<endl;
-cout<<"➭ ";
-cin>>value;
-switch(value)
-{
-case 1:
-enter(); 
-break;
-case 2:
-show();
-break;
-case 3:
-search();
-break;
-case 4:
-update();
-break;
-case 5:
-Delete();
-break;
-case 6:
-exit(0);
-break; 
-default:
-cout<<"  ☹ Invalid input  "<<endl;
-break;
-}
-}
+ {
+  int value;
+  while(true) //to always in Loop
+     {
+      cout<<"\n ❏ Press ☟ "<<endl<<endl;
+      cout<<"➭ ➊ To Enter data"<<endl;
+      cout<<"➭ ➋ To Show data"<<endl;
+      cout<<"➭ ➌ To Search data"<<endl;
+      cout<<"➭ ❹ To Update data"<<endl;
+      cout<<"➭ ❺ To Delete data"<<endl;
+      cout<<"➭ ❻ To Quit"<<endl<<endl;
+      cout<<"➭ ";
+      cin>>value;
+      
+      switch(value)
+         {
+          case 1:
+            enter(); 
+            break;
+
+          case 2:
+           show();
+           break;
+
+          case 3:
+           search();
+           break;
+
+          case 4:
+           update();
+           break;
+          
+          case 5:
+           Delete();
+           break;
+
+          case 6:
+           exit(0);
+           break; 
+
+          default:
+           cout<<"  ☹ Invalid input  "<<endl;
+           break;
+         }
+     }
 } 
