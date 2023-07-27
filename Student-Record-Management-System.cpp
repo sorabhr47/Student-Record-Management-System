@@ -8,103 +8,103 @@ string roll_no[30],name[30],lastname[30],Class[30],course[30],
 int total=0; //to store all data
 void enter()
 {
-int ch=0;
-cout<<" ⌨ Number of students do u want to enter  : ";
-cin>>ch;
+   int ch=0;
+   cout<<" ⌨ Number of students do u want to enter  : ";
+   cin>>ch;
 
-if(total==0)
-{
-total=ch+total;
-for(int i=0;i<ch;i++)
-{
-cout<<"\n ✎ Enter the Data "<<i+1<<endl<<endl;
-cout<<"⇲ Enter Roll NO : "; 
-cin>>roll_no[i];
-cout<<"⇲ Enter Name : ";
-cin>>name[i];
-cout<<"⇲ Enter Last Name : ";
-cin>>lastname[i];
-cout<<"⇲ Enter Class: ";
-cin>>Class[i];
-cout<<"⇲ Enter Course: ";
-cin>>course[i];
-cout<<"⇲ Enter Admission Year: ";
-cin>>admission_year[i];
-cout<<"⇲ Enter Mobile NO: ";
-cin>>mobile_no[i];
-cout<<"\n     { ☑ SAVED SUCCEFULLY ☑ }     "<<endl;
-}
-}
-else 
-{
-//to not to storing double data()
-for(int i=total;i<ch+total;i++) 
-{
-cout<<"\n ✎ Enter the Data "<<i+1<<endl<<endl;
-cout<<"⇲ Enter Roll NO : "; 
-cin>>roll_no[i];
-cout<<"⇲ Enter Name : ";
-cin>>name[i];
-cout<<"⇲ Enter Last Name : ";
-cin>>lastname[i];
-cout<<"⇲ Enter Class: ";
-cin>>Class[i];
-cout<<"⇲ Enter Course: ";
-cin>>course[i];
-cout<<"⇲ Enter Admission Year: ";
-cin>>admission_year[i];
-cout<<"⇲ Enter Mobile NO: ";
-cin>>mobile_no[i];
-cout<<"\n     { ☑ SAVED SUCCEFULLY ☑ }     "<<endl;
-}
-total=ch+total;
-}
-}
+  if(total==0)
+  {
+   total=ch+total;
+   for(int i=0;i<ch;i++)
+    {
+     cout<<"\n ✎ Enter the Data "<<i+1<<endl<<endl;
+     cout<<"⇲ Enter Roll NO : "; 
+     cin>>roll_no[i];
+     cout<<"⇲ Enter Name : ";
+     cin>>name[i];
+     cout<<"⇲ Enter Last Name : ";
+     cin>>lastname[i];
+     cout<<"⇲ Enter Class: ";
+     cin>>Class[i];
+     cout<<"⇲ Enter Course: ";
+     cin>>course[i];
+     cout<<"⇲ Enter Admission Year: ";
+     cin>>admission_year[i];
+     cout<<"⇲ Enter Mobile NO: ";
+     cin>>mobile_no[i];
+     cout<<"\n     { ☑ SAVED SUCCEFULLY ☑ }     "<<endl;
+    }
+  }
+  else 
+  {
+   //to not to storing double data()
+   for(int i=total;i<ch+total;i++) 
+    {
+     cout<<"\n ✎ Enter the Data "<<i+1<<endl<<endl;
+     cout<<"⇲ Enter Roll NO : "; 
+     cin>>roll_no[i];
+     cout<<"⇲ Enter Name : ";
+     cin>>name[i];
+     cout<<"⇲ Enter Last Name : ";
+     cin>>lastname[i];
+     cout<<"⇲ Enter Class: ";
+     cin>>Class[i];
+     cout<<"⇲ Enter Course: ";
+     cin>>course[i];
+     cout<<"⇲ Enter Admission Year: ";
+     cin>>admission_year[i];
+     cout<<"⇲ Enter Mobile NO: ";
+     cin>>mobile_no[i];
+     cout<<"\n     { ☑ SAVED SUCCEFULLY ☑ }     "<<endl;
+     }
+   total=ch+total;
+  }
+ }
 void show()
 {
-if(total==0)
-{
-cout<<"  ✘ Data not found ☹ "<<endl;
-}
-else
-{ 
-for(int i=0;i<total;i++)
-{
-cout<<"\n ⌨ Data of Student : "<<i+1<<endl<<endl;
-cout<<"➥Roll NO : "<<roll_no[i]<<endl;
-cout<<"➥Name    : "<<name[i]<<" "<<lastname[i]<<endl;
-cout<<"➥Class   : "<<Class[i]<<endl;
-cout<<"➥Course  : "<<course[i]<<endl;
-cout<<"➥Mobile  : "<<mobile_no[i]<<endl;
-cout<<"➥Admission Year : "<<admission_year[i]<<endl;
-}
-}
-}
+   if(total==0)
+   {
+     cout<<"  ✘ Data not found ☹ "<<endl;
+   }
+   else
+   { 
+     for(int i=0;i<total;i++)
+     {
+      cout<<"\n ⌨ Data of Student : "<<i+1<<endl<<endl;
+      cout<<"➥Roll NO : "<<roll_no[i]<<endl;
+      cout<<"➥Name    : "<<name[i]<<" "<<lastname[i]<<endl;
+      cout<<"➥Class   : "<<Class[i]<<endl;
+      cout<<"➥Course  : "<<course[i]<<endl;
+      cout<<"➥Mobile  : "<<mobile_no[i]<<endl;
+      cout<<"➥Admission Year : "<<admission_year[i]<<endl;
+     }
+   }
+ }
 void search()
-{
-if(total==0)
-{
-cout<<"  ✘ Data not found ☹ "<<endl; 
-}
-else
-{
-string rollno;
-cout<<"⇲ Enter the roll No :"<<endl<<" ➭";
-cin>>rollno;
-for(int i=0;i<total;i++)
-{
-if(rollno==roll_no[i])
-{
-cout<<"\n ⌨ Data of Student : "<<i+1<<endl<<endl;
-cout<<"➥Roll NO : "<<roll_no[i]<<endl;
-cout<<"➥Name    : "<<name[i]<<" "<<lastname[i]<<endl;
-cout<<"➥Class   : "<<Class[i]<<endl;
-cout<<"➥Course  : "<<course[i]<<endl;
-cout<<"➥Mobile  : "<<mobile_no[i]<<endl;
-cout<<"➥Admission Year : "<<admission_year[i]<<endl;
-}
-} 
-}
+ {
+  if(total==0)
+   {
+     cout<<"  ✘ Data not found ☹ "<<endl; 
+   }
+  else
+   {
+    string rollno;
+    cout<<"⇲ Enter the roll No :"<<endl<<" ➭";
+    cin>>rollno;
+     for(int i=0;i<total;i++)
+      {
+       if(rollno==roll_no[i])
+       {
+        cout<<"\n ⌨ Data of Student : "<<i+1<<endl<<endl;
+        cout<<"➥Roll NO : "<<roll_no[i]<<endl;
+        cout<<"➥Name    : "<<name[i]<<" "<<lastname[i]<<endl;
+        cout<<"➥Class   : "<<Class[i]<<endl;
+        cout<<"➥Course  : "<<course[i]<<endl;
+        cout<<"➥Mobile  : "<<mobile_no[i]<<endl;
+        cout<<"➥Admission Year : "<<admission_year[i]<<endl;
+       }
+      } 
+   }
 }
 
 void update()
